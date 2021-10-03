@@ -23,12 +23,12 @@ public class Solution {
         re = Math.min(leastNeededBlood(i, j + 1, board), re);
 
         dp[i][j] = Math.max(1, re - board[i][j]);
-        System.out.println(re+" "+i+" "+j);
+        System.out.println(re + " " + i + " " + j);
         return dp[i][j];
     }
 
     public static void main(String[] args) throws IOException {
-        int[][] dungeon = {{-2,-3,3},{-5,-10,1},{10,30,-5}};
+        int[][] dungeon = {{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}};
         calculateMinimumHP(dungeon);
     }
 }

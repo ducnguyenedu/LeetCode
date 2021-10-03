@@ -15,8 +15,9 @@ public class Solution {
         }
         return (lastGoodIndex == 0);
     }
+
     public static void main(String[] args) throws IOException {
-        int[]nums = {2,3,1,1,4};
+        int[] nums = {2, 3, 1, 1, 4};
         canJump(nums);
     }
 }
