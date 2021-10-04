@@ -23,6 +23,7 @@ public class Solution {
                 }
             }
         }
+        //System.out.println(perimeter);
         return perimeter;
     }
     public static void main(String[] args) throws IOException {
