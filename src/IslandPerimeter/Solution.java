@@ -26,8 +26,9 @@ public class Solution {
         //System.out.println(perimeter);
         return perimeter;
     }
+
     public static void main(String[] args) throws IOException {
-        int[][] grid = {{0,1,0,0},{1,1,1,0},{0,1,0,0},{1,1,0,0}};
+        int[][] grid = {{0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0}};
         islandPerimeter(grid);
 
     }
