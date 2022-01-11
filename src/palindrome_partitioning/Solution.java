@@ -1,4 +1,9 @@
-class Solution {
+package palindrome_partitioning;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
     List<String> temp = new ArrayList<>();
     List<List<String>> ans = new ArrayList<List<String>>();
     public List<List<String>> partition(String s) {
