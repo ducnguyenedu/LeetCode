@@ -13,8 +13,8 @@ package remove_nth_node_from_end_of_list;
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode curr = head;
-        int totalLength=0;
-        while(curr!=null) {
+        int totalLength = 0;
+        while (curr != null) {
             totalLength++;
             curr = curr.next;
         }
@@ -22,10 +22,10 @@ class Solution {
 
         curr = head;
         ListNode prev = null;
-        int cnt=0;
-        while(curr!=null ) {
-            if(totalLength-n ==cnt)  {
-                if (prev!=null)
+        int cnt = 0;
+        while (curr != null) {
+            if (totalLength - n == cnt) {
+                if (prev != null)
                     prev.next = curr.next;
                 else
                     head = head.next;

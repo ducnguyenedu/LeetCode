@@ -13,7 +13,7 @@ public class Solution {
             int curr = q.poll();
 
             if (arr[curr] == 0) return true;
-            if (arr[curr]<0) continue;
+            if (arr[curr] < 0) continue;
 
             if (curr + arr[curr] < n)
                 q.add(curr + arr[curr]);
