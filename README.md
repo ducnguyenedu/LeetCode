@@ -1,3 +1,3 @@
 # LeetCode
 
-Profile: https://leetcode.com/user7534Z/
+Profile: https://leetcode.com/ducnguyenedu/
