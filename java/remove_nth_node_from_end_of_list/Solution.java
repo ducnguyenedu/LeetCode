@@ -18,8 +18,6 @@ class Solution {
             totalLength++;
             curr = curr.next;
         }
-
-
         curr = head;
         ListNode prev = null;
         int cnt = 0;

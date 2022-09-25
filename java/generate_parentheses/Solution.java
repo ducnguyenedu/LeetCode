@@ -9,9 +9,7 @@ public class Solution {
 
     public List<String> generateParenthesis(int n) {
         if (n == 0) return ans;
-
         arr = new char[2 * n];
-
         build(0, 0, 0);
         return ans;
     }
@@ -21,12 +19,10 @@ public class Solution {
             ans.add(new String(arr));
             return;
         }
-
         if (lt < arr.length / 2) {
             arr[i] = '(';
             build(i + 1, lt + 1, rt);
         }
-
         if (lt > rt && rt < arr.length / 2) {
             arr[i] = ')';
             build(i + 1, lt, rt + 1);

@@ -1,14 +1,11 @@
 package accounts_merge;
 
-
 import java.util.*;
 
 public class Solution {
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
         Map<String, Integer> emailToAccIdMap = new HashMap();
         int relationVec[] = new int[accounts.size()];
-
-
         for (int i = 0; i < accounts.size(); i++) {
             List<String> acc = accounts.get(i);
             relationVec[i] = i;
@@ -26,14 +23,11 @@ public class Solution {
                 }
             }
         }
-
         List<List<String>> res = new LinkedList();
         for (int i = 0; i < relationVec.length; i++) {
             if (relationVec[i] == i) {
-
                 res.add(accounts.get(i));
             } else {
-
                 int t = relationVec[i];
                 while (t != relationVec[t]) {
                     t = relationVec[t];
@@ -41,7 +35,6 @@ public class Solution {
                 combine(accounts.get(i), accounts.get(t));
             }
         }
-
         for (List<String> l : res) {
             Set<String> set = new HashSet();
             for (int i = 1; i < l.size(); i++) {
@@ -55,7 +48,6 @@ public class Solution {
         }
         return res;
     }
-
 
     private void combine(List<String> list1, List<String> list2) {
         for (int i = 1; i < list1.size(); i++) {

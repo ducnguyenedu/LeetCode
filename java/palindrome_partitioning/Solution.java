@@ -17,7 +17,6 @@ public class Solution {
             ans.add(new ArrayList<String>(temp));
             return;
         }
-
         for (int i = ptr; i < s.length(); i++) {
             String str = s.substring(ptr, i + 1);
             if (isPalindrome(str)) {

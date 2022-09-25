@@ -8,34 +8,22 @@ class Solution {
         int diff = Integer.MAX_VALUE;
         int sum = 0;
         Arrays.sort(nums);
-
         for (int i = 0; i < nums.length - 2; i++) {
-
             int l = i + 1;
             int r = nums.length - 1;
-
             while (l < r) {
-
                 int current_sum = nums[i] + nums[l] + nums[r];
-
-
                 if (Math.abs(target - current_sum) < diff) {
                     diff = Math.abs(target - current_sum);
                     sum = current_sum;
                 }
-
                 if (diff == 0) return target;
-
-
                 if (nums[i] + nums[l] + nums[r] < target) {
                     l++;
                 } else
                     r--;
             }
-
         }
-
-
         return sum;
     }
 

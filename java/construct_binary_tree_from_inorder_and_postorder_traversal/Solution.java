@@ -6,8 +6,6 @@ import java.util.Map;
 /**
  * Definition for a binary tree node.
  */
-
-
 public class Solution {
     int postorderIndex = 0;
     Map<Integer, Integer> inorderMap = new HashMap<>();
@@ -21,18 +19,14 @@ public class Solution {
     }
 
     private TreeNode buildTreeNode(int[] postorder, int start, int end) {
-
         if (start > end) return null;
-
         int inorderValue = postorder[postorderIndex--];
         int i = inorderMap.get(inorderValue);
-
         TreeNode node = new TreeNode(inorderValue);
         node.right = buildTreeNode(postorder, i + 1, end);
         node.left = buildTreeNode(postorder, start, i - 1);
         return node;
     }
-
 };
 
 class TreeNode {

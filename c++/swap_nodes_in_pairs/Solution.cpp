@@ -1,7 +1,6 @@
 //
 // Created by hideongloomist on 30/08/2022.
 //
-
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -18,13 +17,10 @@ public:
         if (head == NULL || head->next == NULL) {
             return head;
         }
-
         ListNode *temp;
         temp = head->next;
-
         head->next = swapPairs(head->next->next);
         temp->next = head;
-
         return temp;
     }
 };

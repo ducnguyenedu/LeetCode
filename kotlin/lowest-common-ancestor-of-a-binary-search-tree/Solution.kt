@@ -5,14 +5,11 @@
  *     var right: TreeNode? = null
  * }
  */
-
 class Solution {
     fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
         if (root == null) return null
-
         val valP = p?.`val` ?: -1
         val valQ = q?.`val` ?: -1
-
         return when {
             valP > root.`val` && valQ > root.`val` ->
                 lowestCommonAncestor(root.right, p, q)

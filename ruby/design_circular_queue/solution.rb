@@ -1,5 +1,4 @@
 class MyCircularQueue
-
 =begin
     :type k: Integer
 =end

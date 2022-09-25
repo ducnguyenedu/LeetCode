@@ -13,7 +13,6 @@ public class Solution {
                 return root.right;
             if (root.right == null)
                 return root.left;
-
             root.val = min(root.right);
             root.right = deleteNode(root.right, root.val);
         }
