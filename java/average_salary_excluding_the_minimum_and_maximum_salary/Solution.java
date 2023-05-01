@@ -1,5 +1,7 @@
 package average_salary_excluding_the_minimum_and_maximum_salary;
 
+import java.util.Arrays;
+
 public class Solution {
     public double average(int[] salary) {
         Arrays.sort(salary);
